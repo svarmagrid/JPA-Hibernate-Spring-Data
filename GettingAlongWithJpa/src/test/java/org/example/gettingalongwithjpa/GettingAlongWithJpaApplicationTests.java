@@ -1,6 +1,7 @@
 package org.example.gettingalongwithjpa;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.example.gettingalongwithjpa.entity.Department;
 import org.example.gettingalongwithjpa.entity.Employee;
@@ -26,7 +27,7 @@ class GettingAlongWithJpaApplicationTests {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @Autowired
+    @PersistenceContext
     private EntityManager entityManager;
 
     @Autowired
